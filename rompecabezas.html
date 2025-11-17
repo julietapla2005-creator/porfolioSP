@@ -117,11 +117,15 @@
             justify-content: center;
             transition: transform 0.3s ease;
             border-radius: 10px;
-            overflow: hidden;
+            overflow: visible;
         }
 
-        .puzzle-piece:hover {
-            transform: scale(1.05);
+        .puzzle-piece:hover img {
+            transform: rotate(-8deg) scale(1.1);
+        }
+
+        .puzzle-piece img {
+            transition: transform 0.3s ease;
         }
 
         .puzzle-piece img {
@@ -331,9 +335,27 @@
             width: 80%;
             height: 80%;
             transform: translateY(-10px);
+            transition: transform 0.3s ease;
+        }
+        
+        .puzzle-piece:nth-child(5):hover img {
+            transform: translateY(-10px) rotate(-8deg) scale(1.1);
         }
 
         @media (max-width: 968px) {
+            .canva-title {
+                font-size: 36px;
+            }
+            
+            .canva-subtitle {
+                font-size: 20px;
+            }
+            
+            .puzzle-title {
+                font-size: 32px;
+                margin-bottom: 30px;
+            }
+            
             .puzzle-container {
                 grid-template-columns: repeat(2, 250px);
                 grid-template-rows: repeat(3, 250px);
@@ -343,9 +365,40 @@
                 width: 250px;
                 height: 250px;
             }
+            
+            .modal-content {
+                padding: 40px 30px;
+            }
+            
+            .modal-title {
+                font-size: 28px;
+            }
         }
 
         @media (max-width: 600px) {
+            .canva-section {
+                padding: 40px 15px;
+            }
+            
+            .canva-title {
+                font-size: 28px;
+                margin-bottom: 15px;
+            }
+            
+            .canva-subtitle {
+                font-size: 18px;
+                margin-bottom: 30px;
+            }
+            
+            .puzzle-section {
+                padding: 60px 15px;
+            }
+            
+            .puzzle-title {
+                font-size: 26px;
+                margin-bottom: 25px;
+            }
+            
             .puzzle-container {
                 grid-template-columns: 220px;
                 grid-template-rows: repeat(6, 220px);
@@ -354,6 +407,80 @@
             .puzzle-piece {
                 width: 220px;
                 height: 220px;
+            }
+            
+            .modal-content {
+                padding: 35px 20px;
+                max-width: 95%;
+            }
+            
+            .modal-title {
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
+            
+            .modal-description {
+                font-size: 15px;
+            }
+            
+            .close-modal {
+                font-size: 28px;
+                top: 15px;
+                right: 20px;
+            }
+            
+            .youtube-link {
+                padding: 12px 30px;
+                font-size: 16px;
+            }
+            
+            .back-home {
+                padding: 10px 25px;
+                font-size: 15px;
+            }
+            
+            .gallery-row {
+                flex-direction: column;
+            }
+            
+            .gallery-row .gallery-image {
+                max-width: 100%;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .canva-title {
+                font-size: 24px;
+            }
+            
+            .canva-subtitle {
+                font-size: 16px;
+            }
+            
+            .puzzle-title {
+                font-size: 22px;
+            }
+            
+            .puzzle-container {
+                grid-template-columns: 180px;
+                grid-template-rows: repeat(6, 180px);
+            }
+            
+            .puzzle-piece {
+                width: 180px;
+                height: 180px;
+            }
+            
+            .modal-content {
+                padding: 30px 15px;
+            }
+            
+            .modal-title {
+                font-size: 20px;
+            }
+            
+            .modal-description {
+                font-size: 14px;
             }
         }
     </style>
@@ -372,7 +499,7 @@
 
     <!-- SECCIÓN ROMPECABEZAS -->
     <div class="puzzle-section">
-        <h1 class="puzzle-title">Seleccioná un Proyecto</h1>
+        <h1 class="puzzle-title">Seleccioná una de las piezas</h1>
         
         <div class="puzzle-container">
             <!-- FILA 1 -->

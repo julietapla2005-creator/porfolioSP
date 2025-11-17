@@ -170,20 +170,6 @@
             height: 350px;
         }
 
-        @media (max-width: 768px) {
-            .content-wrapper {
-                flex-direction: column;
-            }
-            
-            .description-text {
-                text-align: center;
-            }
-
-            .examples-grid, .contact-section {
-                flex-direction: column;
-            }
-        }
-
         /* SECCIÓN 3 - EJEMPLOS Y CONTACTO */
         .section-three {
             min-height: 100vh;
@@ -326,6 +312,120 @@
             color: white;
             font-size: 12px;
             font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 32px;
+                margin-bottom: 40px;
+            }
+
+            .caja-image {
+                width: 85%;
+            }
+
+            .content-wrapper {
+                flex-direction: column;
+                gap: 40px;
+                padding: 40px 20px;
+            }
+            
+            .description-text {
+                text-align: center;
+                font-size: 16px;
+            }
+
+            .description-text p {
+                margin-bottom: 15px;
+            }
+
+            .cta-text {
+                font-size: 20px;
+            }
+
+            .caja2-image {
+                width: 280px;
+            }
+
+            .examples-title {
+                font-size: 32px;
+                margin-bottom: 40px;
+            }
+
+            .ultima-pieza-video {
+                width: 320px;
+                margin-bottom: 40px;
+            }
+
+            .examples-grid {
+                gap: 40px;
+                margin-bottom: 60px;
+            }
+
+            .example-image {
+                width: 280px;
+            }
+
+            .example-caption {
+                font-size: 18px;
+            }
+
+            .yo-image {
+                width: 250px;
+            }
+
+            .contact-title {
+                font-size: 20px;
+                text-align: center;
+            }
+
+            .social-icon {
+                width: 50px;
+                height: 50px;
+            }
+
+            .examples-grid, .contact-section {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .title {
+                font-size: 24px;
+                letter-spacing: 1px;
+            }
+
+            .description-text {
+                font-size: 14px;
+            }
+
+            .cta-text {
+                font-size: 18px;
+            }
+
+            .caja2-image {
+                width: 240px;
+            }
+
+            .examples-title {
+                font-size: 24px;
+            }
+
+            .ultima-pieza-video {
+                width: 280px;
+            }
+
+            .example-image {
+                width: 240px;
+            }
+
+            .yo-image {
+                width: 200px;
+            }
+
+            .contact-title {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
